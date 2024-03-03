@@ -27,7 +27,6 @@ export class DemoItemService {
       // get instances of categories
       const categories = await this.demoCategoryModel.findAll({
         where: { demoCategoryId: DemoCategories },
-        transaction: t,
       });
 
       // modify entries using the $set to the relationship table
