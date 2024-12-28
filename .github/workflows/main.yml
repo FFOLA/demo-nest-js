@@ -23,7 +23,6 @@ jobs:
         cp package.json dist/
         cd dist
         npm install
-        npm run build
         cd ..
     
     - name: 📂 Sync files
