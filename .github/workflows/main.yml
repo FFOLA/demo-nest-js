@@ -18,6 +18,14 @@ jobs:
         npm install
         npm run build
     
+    - name: 📦 Copy package.json to dist
+      run: |
+        cp package.json dist/
+        cd dist
+        npm install --production
+        npm run build
+        cd ..
+    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
