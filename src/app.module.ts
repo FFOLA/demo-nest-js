@@ -17,11 +17,11 @@ import { DemoItemModule } from './modules/demo-item/demo-item.module';
       },
 
       dialect: 'mysql',
-      host: process.env.DB_HOST,
-      port: Number(process.env.DB_PORT),
-      username: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE_NAME,
+      host: '127.0.0.1',
+      port: 3306,
+      username: 'root',
+      password: '',
+      database: 'nest_sample',
     }),
     DemoModule,
     DemoCategoryModule,
@@ -30,4 +30,4 @@ import { DemoItemModule } from './modules/demo-item/demo-item.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
